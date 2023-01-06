@@ -6,6 +6,7 @@ protocol SendMsg {
     func confirmSendingOrder(msg: String)
 }
 
+
 class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SendMsg {
     
     @IBOutlet weak var guestOrderCollectionView: UICollectionView!
@@ -13,9 +14,9 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var drinkBtn: UIButton!
     @IBOutlet weak var desserBtn: UIButton!
     @IBOutlet weak var kidsBtn: UIButton!
-    
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var guestInfolabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var extraOrderTextView = UITextView()
     var extraOrderView = UIView()
@@ -31,7 +32,7 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     let tableViewModel = TableViewModel()
     var tableNumber = Constance.emptyText
     
-    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +40,10 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showMenu[section].types.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constance.cellForMenu, for: indexPath) as! TableViewCellForMenue
@@ -52,63 +51,43 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let theType = showMenu[indexPath.section].types[indexPath.row]
         cell.typeNameLabel.text = theType.name
-        
-        
         cell.countOfTypes.text = showGuestOrdersQuantity(name: theType.name)
-        
-        
         cell.removeButton.tag = indexPath.row
         cell.addButton.tag = indexPath.row
+        
         let type = showMenu[indexPath.section].types[indexPath.row]
         cell.addButton.type = type
         cell.removeButton.type = type
         cell.addButton.addTarget(self, action: #selector(addOrder), for: .touchUpInside)
         cell.removeButton.addTarget(self, action: #selector(removeOrder), for: .touchUpInside)
-        
         return cell
     }
     
     @objc func addOrder(sender: UIButton) {
         let type = sender.type
-        
-        
         tableViewModel.guestOrders.append(type!)
-        
         guestOrderCollectionView.reloadData()
-        
         tableView.reloadData()
-        
     }
     
     @objc func removeOrder(sender: UIButton) {
         let type = sender.type
-        
-        
         let name = type?.name
-        
         if let index = tableViewModel.guestOrders.firstIndex(where: { $0.name == name }) {
             tableViewModel.guestOrders.remove(at: index)
             guestOrderCollectionView.reloadData()
-            
             tableView.reloadData()
         }
-        
-        
     }
     
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        // number of sections in the table view
         return showMenu.count
     }
     
     
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         let deviceManager = DeviceManager()
-        
         let label = UILabel()
         label.text = "\(showMenu[section].tittle)"
         label.textAlignment = .center
@@ -121,7 +100,6 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let device = UIDevice.current
-
         if device.userInterfaceIdiom == .phone {
             // Return a smaller cell size for iPhones
             return 80
@@ -130,13 +108,11 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
             return 120
         }
     }
-
     
     
     func showGuestOrdersQuantity(name : String) -> String{
-       let matchingObjects = tableViewModel.guestOrders.filter { $0.name == name }
+        let matchingObjects = tableViewModel.guestOrders.filter { $0.name == name }
         let count = matchingObjects.count
-        
         if (count == Nr.zero){
             return ""
         }else{
@@ -146,15 +122,13 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (tableViewModel.guest?.orders.count)!
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constance.guestorderCell, for: indexPath) as! GuestOrderCollectionViewCell
-        
         cell.guestOrderlabel.text =  tableViewModel.guest?.orders[indexPath.row].name
         return cell
     }

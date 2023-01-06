@@ -3,7 +3,7 @@ import Foundation
 
 
 class Table {
-  
+    
     
     var guests : [Guest] = []
     var number = ""
@@ -14,7 +14,7 @@ class Table {
     var hasOrder = false
     var tableColor = Constance.tableAvailable
     var tableStatus = Constance.Ledig
- 
+    
     
     func getTableSum(){
         self.sum = 0.0
@@ -22,10 +22,6 @@ class Table {
             self.sum += guest.sum
         }
     }
-    
-   
-   
-    
     
     
 }

@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 extension HandleOrderViewController {
-  
+    
     func addComponentToViewToHandleSpecialOrder(){
         
         
@@ -31,28 +31,22 @@ extension HandleOrderViewController {
         extraOrderTextView.isHidden = true
         ConfirmOrderIsDoneButton.isHidden = true
         extraOrderTextView.isEditable = false
-
+        
         view.addSubview(extraOrderView)
         view.addSubview(extraOrderTextView)
         view.addSubview(ConfirmOrderIsDoneButton)
         view.addSubview(cancelButton)
-        
-        
     }
     
     
-   
+    
     
     @objc func ConfirmOrderIsDone() {
-    
-        
         currentGuest?.guestspecialOrderDone = true
         menuCollectionView.reloadData()
         hideComponent()
-       
-      
+        
     }
-    
     
     @objc func ConfirmOrderIsNotDone() {
         currentGuest?.guestspecialOrderDone = false
@@ -60,35 +54,26 @@ extension HandleOrderViewController {
         hideComponent()
     }
     
-    
-    
     func showComponentToHandleSpecialOrder () {
-     
-      
         self.navigationItem.hidesBackButton = true
         extraOrderView.isHidden = false
         cancelButton.isHidden = false
         extraOrderTextView.isHidden = false
         ConfirmOrderIsDoneButton.isHidden = false
         extraOrderTextView.text = currentGuest?.specialOrder
-        
-        
     }
     
     
     func hideComponent (){
-     
-  
-      
         self.navigationItem.hidesBackButton = false
         extraOrderView.isHidden = true
         cancelButton.isHidden = true
         extraOrderTextView.isHidden = true
-       ConfirmOrderIsDoneButton.isHidden = true
+        ConfirmOrderIsDoneButton.isHidden = true
         
     }
     
- 
+    
     
     
 }

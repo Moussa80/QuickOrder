@@ -3,15 +3,15 @@ import Foundation
 
 class DrinksMenus {
     
-
+    
     let coktailsmenu = Menu()
     let beerMenu = Menu()
     let ciderAndSodaMenue = Menu()
     let wineMenu = Menu()
     
     var drinksmenus = [Menu]()
-   
-     init (){
+    
+    init (){
         
         
         // 1 COCKTAILS
@@ -40,11 +40,11 @@ class DrinksMenus {
         
         self.coktailsmenu.tittle = "Coktail"
         self.coktailsmenu.types = [aperolSpritz,vodkaRedBull,classicMargareta,classicMintMojito
-            ,heroGinFentimansTonic,ginAndTonic,fishShot,sourFiskCola,gammelDansk,fernetBranca,
-            jimBeamHighBall,jackAndCola,passionFruitCobbler,negroni,espressoMartini,strawberryLemonMocktail,
-            brancaMenta,bacardiRazz,sourFiskIcePear,jackDanielsHoney]
-         
-       
+                                   ,heroGinFentimansTonic,ginAndTonic,fishShot,sourFiskCola,gammelDansk,fernetBranca,
+                                   jimBeamHighBall,jackAndCola,passionFruitCobbler,negroni,espressoMartini,strawberryLemonMocktail,
+                                   brancaMenta,bacardiRazz,sourFiskIcePear,jackDanielsHoney]
+        
+        
         
         //-------------------------------------------------------------------------------------------------------
         
@@ -78,15 +78,15 @@ class DrinksMenus {
         
         self.beerMenu.tittle = "Beer"
         self.beerMenu.types = [brooklynLager40cl,brooklynLager50cl,carlsbergHof40cl,carlsbergHof50cl,staropramen40cl,staropramen50,
-        carlsbergExport40cl,carlsbergExport50cl,brooklynDefenderIpa40cl,brooklynDefenderIpa50cl,guinnesDraught,
-        samuelAdamBostonLager,eriksbergLager,eriksbergKaraktarBarnStenlager,coronaExtra,blancWitbier1664,
-        erdingerHefeWeissbier,grimbergenblondeAle,brooklynEipa,lagunitas,brooklynBelAir,ncbBreWery,brooklynSpecialEffects,
-        stigunaNapa,carlsBergEko]
+                               carlsbergExport40cl,carlsbergExport50cl,brooklynDefenderIpa40cl,brooklynDefenderIpa50cl,guinnesDraught,
+                               samuelAdamBostonLager,eriksbergLager,eriksbergKaraktarBarnStenlager,coronaExtra,blancWitbier1664,
+                               erdingerHefeWeissbier,grimbergenblondeAle,brooklynEipa,lagunitas,brooklynBelAir,ncbBreWery,brooklynSpecialEffects,
+                               stigunaNapa,carlsBergEko]
         
         //-------------------------------------------------------------------------------------------------------
         // 3 Cider And Soda
-         
-       
+        
+        
         let boulardCiderEko = Drink(name: "BOULARD CIDRE EKO", price: 75.0 )
         let somersbySweetCider = Drink(name: "SOMERSBY SWEET CIDER", price: 69.0)
         let somersbyCider  = Drink(name: "SOMERSBY CIDER 0,0%", price:45.0 )
@@ -101,7 +101,7 @@ class DrinksMenus {
         
         self.ciderAndSodaMenue.tittle = "Cider & Soda"
         self.ciderAndSodaMenue.types =  [boulardCiderEko,somersbySweetCider,somersbyCider,pepsimax,pepsi,
-                                   zingo,sevenUp,ramlosa,redBull,redBullSugarFree]
+                                         zingo,sevenUp,ramlosa,redBull,redBullSugarFree]
         
         //-------------------------------------------------------------------------------------------------------
         // 4 Wine
@@ -153,21 +153,21 @@ class DrinksMenus {
         
         let vintenseMerlotAlcoholoFreeGlas = Drink(name: "VINTENSE MERLOT Alcohol free / G", price: 69.0)
         let vintenseMerlotAlcoholoFreeflaska = Drink(name: "VINTENSE MERLOT Alcohol free / F", price: 289.0 )
-      
         
- 
-           
+        
+        
+        
         self.wineMenu.tittle = "Wine"
         self.wineMenu.types = [champangeBrutMajeurAyalaGlas,champangeBrutMajeurAyalaFlaska,cavaJuameSeeraEkoGlas,cavaJuameSeeraEkoFlaska,
-            proseccoAbbaziaExtraDryGlas,proseccoAbbaziaExtraDryFlaska,vintenseSparklingAlcoholFreeGlas,vintenseSparklingAlcoholFreeFlaska,loCaTourCreamyChardonnayGlas,loCaTourCreamyChardonnayFlaska,turckheimPinotBlancEkoGlas,turckheimPinotBlancEkoFlaska,settesoliGrilloEkoGlas,settesoliGrilloEkoFlaska,vintenseChardonnayAlcoholFreeGlas,vintenseChardonnayAlcoholFreeFlaska,mariuspeyolCotesDeprovenceRoseGlas,
-            mariuspeyolCotesDeprovenceRoseFlaska,settesoliRoseEkoGlas,settesoliRoseEkoFlaska,loCaTourZinfandelGlas,loCaTourZinfandelFlaska,poggioAlCasoneChiantiSuperioreGlas,poggioAlCasoneChiantiSuperioreFlaska,
-            faustinoViiRiojaGlas,faustinoViiRiojaFlaska,paulJabouletCotesDuParalleleGlas,paulJabouletCotesDuParalleleFlaska,
-            settesoliNeroDAvolaEkoGlas,settesoliNeroDAvolaEkoFlaska,vintenseMerlotAlcoholoFreeGlas,vintenseMerlotAlcoholoFreeflaska]
-            
-    
+                               proseccoAbbaziaExtraDryGlas,proseccoAbbaziaExtraDryFlaska,vintenseSparklingAlcoholFreeGlas,vintenseSparklingAlcoholFreeFlaska,loCaTourCreamyChardonnayGlas,loCaTourCreamyChardonnayFlaska,turckheimPinotBlancEkoGlas,turckheimPinotBlancEkoFlaska,settesoliGrilloEkoGlas,settesoliGrilloEkoFlaska,vintenseChardonnayAlcoholFreeGlas,vintenseChardonnayAlcoholFreeFlaska,mariuspeyolCotesDeprovenceRoseGlas,
+                               mariuspeyolCotesDeprovenceRoseFlaska,settesoliRoseEkoGlas,settesoliRoseEkoFlaska,loCaTourZinfandelGlas,loCaTourZinfandelFlaska,poggioAlCasoneChiantiSuperioreGlas,poggioAlCasoneChiantiSuperioreFlaska,
+                               faustinoViiRiojaGlas,faustinoViiRiojaFlaska,paulJabouletCotesDuParalleleGlas,paulJabouletCotesDuParalleleFlaska,
+                               settesoliNeroDAvolaEkoGlas,settesoliNeroDAvolaEkoFlaska,vintenseMerlotAlcoholoFreeGlas,vintenseMerlotAlcoholoFreeflaska]
+        
+        
         self.drinksmenus = [coktailsmenu,beerMenu,ciderAndSodaMenue,wineMenu]
         
-     }
+    }
     
     
     

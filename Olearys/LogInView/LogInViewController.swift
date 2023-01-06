@@ -21,7 +21,7 @@ class LogInViewController: UIViewController {
       
   }
   
-    // Dismiss keyboard on touching screen
+    // Dismiss keyboard on touching screen.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }

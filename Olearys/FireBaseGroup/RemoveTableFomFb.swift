@@ -6,8 +6,6 @@ import Firebase
 class RemoveTableFomFb {
     
     
-    
-    
     var ref :  DatabaseReference!
     let tableInFb : DatabaseReference!
     
@@ -20,38 +18,29 @@ class RemoveTableFomFb {
     
     
     func removeTable(table : Table){
-       
+        let restaurant =   ref.child(Constance.olearysEntre)
+        let tableNr  = Int (table.number)!
+        let tableNumber = table.number
+        let tableIndexInFb = String(tableNr - Nr.one)
         
-           let restaurant =   ref.child(Constance.olearysEntre)
+        let table =  restaurant.child(Constance.tables).child(tableIndexInFb)
         
-           let tableNr  = Int (table.number)!
-           let tableNumber = table.number
-           let tableIndexInFb = String(tableNr - Nr.one)
+        let tableAsDectionary : [String : Any] =
         
-            let table =  restaurant.child(Constance.tables).child(tableIndexInFb)
+        [
             
-            let tableAsDectionary : [String : Any] =
-            
-            [
-      
-                Constance.tableNumber : tableNumber ,
-                Constance.tableAvailable : true ,
-                Constance.tableOrdersPaid : false,
-                Constance.tableHasOrder : false,
-                Constance.tableOrdersDone : false ,
-                Constance.tableSum : 0.0 ,
-                Constance.tableColor : Constance.tableAvailable ,
-                Constance.tableStatus : Constance.Ledig
-            ]
-            
-            table.setValue(tableAsDectionary)
+            Constance.tableNumber : tableNumber ,
+            Constance.tableAvailable : true ,
+            Constance.tableOrdersPaid : false,
+            Constance.tableHasOrder : false,
+            Constance.tableOrdersDone : false ,
+            Constance.tableSum : 0.0 ,
+            Constance.tableColor : Constance.tableAvailable ,
+            Constance.tableStatus : Constance.Ledig
+        ]
         
-      
-        
+        table.setValue(tableAsDectionary)
     }
-    
-    
-    
     
     
     

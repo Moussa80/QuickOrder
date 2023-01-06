@@ -53,7 +53,7 @@ extension TakeOrderViewController {
         let specialOrder = extraOrderTextView.text
         if (specialOrder != ""){
             Singleton.sharedInstance.takeOrderViewController?.tableViewModel.addSpecialOrder(specialOrder: specialOrder!)
-           
+            
         }
         hideComponent()
     }

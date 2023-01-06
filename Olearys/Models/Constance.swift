@@ -22,14 +22,14 @@ class Constance {
     static let navigateToPaymentView = "navigateToPaymentView"
     static let navigateToHandleOrderView = "navigateToHandleOrderView"
     static let navigateToTakeOrderView = "navigateToTakeOrderView"
-  
-  
     
-   // Restaurant
+    
+    
+    // Restaurant
     static let olearysEntre = "olearysEntre"
     static let tables = "tables"
     
-
+    
     // Table
     static let tableNumber = "tableNumber"
     static let tableHasOrder = "tableHasOrder"
@@ -42,7 +42,7 @@ class Constance {
     static let tableColor = "tableColor"
     static let tableBusy = "tableBusy"
     static let busy = "Upptaget"
-   
+    
     
     // Guest
     static let guests = "guests"
@@ -54,8 +54,8 @@ class Constance {
     static let guestspecialOrderDone = "guestspecialOrderDone"
     static let typeName = "typeName"
     static let typePrice = "typePrice"
-  
-
+    
+    
     //other
     static let emptyText = ""
     static let bord = "Bord "

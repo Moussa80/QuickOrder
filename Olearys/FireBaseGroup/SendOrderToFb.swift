@@ -65,16 +65,5 @@ class SendOrderToFb {
     
     
     
-    func writeThis(x: Any){
-        print("")
-        print(">>>>>>>>>>>>>>>>>>>>>>>>>>")
-        print(x)
-        print(">>>>>>>>>>>>>>>>>>>>>>>>>>")
-        print("")
-        
-    }
-    
-    
-    
     
 }

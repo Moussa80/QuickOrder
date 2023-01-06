@@ -12,12 +12,9 @@ class BuildTablesInFb {
         ref = Database.database().reference()
     }
     
-    
-   
     func buildTables (tableQuantity : Int) {
         
         let restaurant =   ref.child(Constance.olearysEntre)
-        
         for tableNr in 0...tableQuantity{
             
             let tableNumber = String(tableNr + Nr.one)
@@ -27,7 +24,7 @@ class BuildTablesInFb {
             let tableAsDectionary : [String : Any] =
             
             [
-      
+                
                 Constance.tableNumber : tableNumber ,
                 Constance.tableAvailable : true ,
                 Constance.tableOrdersPaid : false,

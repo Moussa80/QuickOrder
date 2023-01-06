@@ -15,12 +15,9 @@ class UpdateTableInFb {
     }
     
     
-    
     func makeOrderDone(table : Table){
-       
         let tableNumberToInt =  Int(table.number)!
         let tableIndexInFb = String(tableNumberToInt - Nr.one)
-        
         tableInFb.child(tableIndexInFb).child(Constance.tableOrdersDone).setValue(true)
         tableInFb.child(tableIndexInFb).child(Constance.tableHasOrder).setValue(false)
         

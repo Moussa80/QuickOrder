@@ -7,7 +7,6 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var tableNumberLabel: UILabel!
-    
     var extraOrderTextView = UITextView()
     var extraOrderView = UIView()
     var ConfirmOrderIsDoneButton = UIButton()
@@ -18,11 +17,9 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableNumberLabel.text = "\(table.number) Summa : \(table.sum)"
         addComponentToViewToHandleSpecialOrder()
     }
-    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,15 +29,11 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constance.kitchenmenuCell, for: indexPath) as! KitchenMenuCollectionViewCell
-        
-         let guest = table.guests[indexPath.row]
-         cell.types = guest.orders
-         cell.guestNumber.text = guest.number
-        
+        let guest = table.guests[indexPath.row]
+        cell.types = guest.orders
+        cell.guestNumber.text = guest.number
         cell.guestOrderTableView.reloadData()
-        
         cell.guestNumber.tag = indexPath.row
         
         
@@ -49,13 +42,8 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
         }else{
             cell.guestNumber.backgroundColor = Clr.tableAvailable
         }
-        
-        
         return cell
-        
-        
     }
-    
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -63,43 +51,27 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
         if (currentGuest?.guestHasspecialOrder == true){
             showComponentToHandleSpecialOrder()
         }
-        
     }
-    
-    
     
     
     
     @IBAction func OrderDoneButton(_ sender: Any) {
         let checkIfOrderDone = CheckIfOrderDone()
-        
         if checkIfOrderDone.areAllOrdersDone(guests: table.guests) {
             let updateTableInFb = UpdateTableInFb()
             updateTableInFb.makeOrderDone(table: table)
             self.navigationController?.popViewController(animated: true)
-            
         } else {
             Msg.sendMsg(vc: self, msg: Msg.orderDosentDone)
-            
         }
-        
     }
-    
-    
-    
-    
     
     
     // cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let cellSize = DeviceManager()
         return CGSize(width: cellSize.width, height: Int(self.view.frame.height) - 350)
     }
-    
-    
-    
-    
     
     
 }

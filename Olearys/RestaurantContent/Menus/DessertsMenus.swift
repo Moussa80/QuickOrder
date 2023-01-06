@@ -4,7 +4,7 @@ import Foundation
 
 
 class DessertsMenus {
-   
+    
     
     var dessertsMenu = Menu()
     var coffeDrinksMenu = Menu()
@@ -16,21 +16,21 @@ class DessertsMenus {
         
         
         //1 Desserts -> belogs to desserts menu
-         let chooclateBrowine =  Dessert(name: "CHOCOLATE BROWNIE", price: 59.0)
-         let sweetLemonTiramisu = Dessert(name: " SWEET LEMON TIRAMISU", price:39.0)
-         let deepFiedBroWine  = Dessert(name: "DEEP FRIED BROWNIE", price:29.0)
-         let iceCreamSundae   = Dessert(name: "ICE CREAM SUNDAE", price:49.0)
-         let cheeseCake   = Dessert(name: "CHEESE CAKE", price:59.0)
-         let strawberryMilkshake = Dessert(name: "STRAWBERRY MILKSHAKE", price:69.0 )
-         let chocolateMilkshake = Dessert(name: "CHOCOLATE MILKSHAKE", price:69.0 )
-       
-         self.dessertsMenu.tittle = "Desserts"
-         self.dessertsMenu.types = [chooclateBrowine,sweetLemonTiramisu,deepFiedBroWine,
-            iceCreamSundae,cheeseCake,strawberryMilkshake,chocolateMilkshake]
+        let chooclateBrowine =  Dessert(name: "CHOCOLATE BROWNIE", price: 59.0)
+        let sweetLemonTiramisu = Dessert(name: " SWEET LEMON TIRAMISU", price:39.0)
+        let deepFiedBroWine  = Dessert(name: "DEEP FRIED BROWNIE", price:29.0)
+        let iceCreamSundae   = Dessert(name: "ICE CREAM SUNDAE", price:49.0)
+        let cheeseCake   = Dessert(name: "CHEESE CAKE", price:59.0)
+        let strawberryMilkshake = Dessert(name: "STRAWBERRY MILKSHAKE", price:69.0 )
+        let chocolateMilkshake = Dessert(name: "CHOCOLATE MILKSHAKE", price:69.0 )
+        
+        self.dessertsMenu.tittle = "Desserts"
+        self.dessertsMenu.types = [chooclateBrowine,sweetLemonTiramisu,deepFiedBroWine,
+                                   iceCreamSundae,cheeseCake,strawberryMilkshake,chocolateMilkshake]
         //------------------------------------------------------------------------------------------
         
         
-         //2 COFFEE DRINKS -> belogs to desserts menu
+        //2 COFFEE DRINKS -> belogs to desserts menu
         let espressomartini = Dessert(name: "ESPRESSO MARTINI", price: 119.0)
         let tullamore = Dessert(name: "ULLAMORE IRISH COFFEE", price: 119.0)
         let gallianoMartini = Dessert(name: "GALLIANO MARTINI", price: 119.0)
@@ -44,7 +44,7 @@ class DessertsMenus {
         
         self.coffeDrinksMenu.tittle = "Cooffe"
         self.coffeDrinksMenu.types = [espressomartini,tullamore,gallianoMartini,jamaicanCoffe,coffe,tea,
-                                          espressoSmall,espressoBig,cappucciono,coffeLatte]
+                                      espressoSmall,espressoBig,cappucciono,coffeLatte]
         //------------------------------------------------------------------------------------------
         
         
@@ -69,11 +69,11 @@ class DessertsMenus {
         
         self.avecMenu.tittle = "Avec"
         self.avecMenu.types = [braastadVs,boulardCalvados,makersMars,limoncelloVillaMassa,bacardiSpiced,
-                        gentelmanJack,jackDaniels,jimBean,famousGrouse,highlandPark12, macallanDbCask12,laphroaig10,theKraken,bacaradi8Anos,baileys,vaccariSambuca]
+                               gentelmanJack,jackDaniels,jimBean,famousGrouse,highlandPark12, macallanDbCask12,laphroaig10,theKraken,bacaradi8Anos,baileys,vaccariSambuca]
         
         self.allDessertsMenus = [dessertsMenu,coffeDrinksMenu,avecMenu]
-            
-        }
+        
+    }
     
     
 }

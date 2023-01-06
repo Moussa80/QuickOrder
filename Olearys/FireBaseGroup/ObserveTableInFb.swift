@@ -46,7 +46,7 @@ class ObserveTableInFb {
                                     if let guestOrderDone = guestFb![Constance.guestspecialOrderDone] as? Bool{
                                         
                                         guest.guestspecialOrderDone = guestOrderDone
-                                    
+                                        
                                         
                                         if let guestSpecialOrder = guestFb![Constance.specialOrder] as? String{
                                             

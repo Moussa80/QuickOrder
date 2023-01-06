@@ -50,10 +50,9 @@ class Msg {
                 let guestNumber  = Int (guest!.number)
                 let index = guestNumber! - Nr.one
                 takeOrderVC!.tableViewModel.guests.remove(at: index)
-           
+                
             }
             
-          
             
             sendOrderToFb.sendOrderToFireBase(table: takeOrderVC!.tableViewModel)
             

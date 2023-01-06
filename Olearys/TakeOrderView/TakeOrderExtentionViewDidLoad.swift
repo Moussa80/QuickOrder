@@ -36,7 +36,6 @@ extension TakeOrderViewController {
     func showTableInfo(){
         
         self.navigationItem.title = "\(Constance.bord) \(tableViewModel.number)"
-      
         self.navigationItem.rightBarButtonItem?.title = "\(tableViewModel.sum)"
         
         let devicemanager = DeviceManager()
@@ -44,13 +43,10 @@ extension TakeOrderViewController {
         let attributes = [NSAttributedString.Key.font: font ,NSAttributedString.Key.foregroundColor: UIColor.systemGray3 ]
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes(attributes, for: .normal)
         navigationController?.navigationBar.titleTextAttributes = attributes
-     
-        
-        
-    }
+     }
     
     
- 
+
     
     func sendMsg(msg : String) {
         Msg.sendMsg(vc: self , msg: msg)
