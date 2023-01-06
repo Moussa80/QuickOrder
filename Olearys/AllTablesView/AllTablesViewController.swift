@@ -12,6 +12,8 @@ class AllTablesViewController: UIViewController {
     observeTableInFb.getTables { [weak self] in
       DispatchQueue.main.async { [weak self] in
         self?.tablesCollectionView.reloadData()
+          
+       
       }
     }
   }

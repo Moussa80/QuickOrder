@@ -29,11 +29,11 @@ class TakePaymentViewController: UIViewController , UITableViewDelegate , UITabl
         
         let deviceManager = DeviceManager()
         let label = UILabel()
-        label.text = "\(Constance.gastNr) \(section + Nr.one)"
+        label.text = "\(Constance.gastNr) \(table.guests[section].number)    summa :  \(table.guests[section].sum)"
         label.font = UIFont.systemFont(ofSize: CGFloat(deviceManager.tittleeaderInSection))
         label.textColor = Clr.tableAvailable
         label.textAlignment = .center
-        label.backgroundColor = Clr.appColor
+        label.backgroundColor = .black
         return label
     }
     

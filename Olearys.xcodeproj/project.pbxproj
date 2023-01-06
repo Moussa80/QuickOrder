@@ -14,6 +14,7 @@
 		B5319FCD29422DA7008BA502 /* TakePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5319FCC29422DA7008BA502 /* TakePaymentViewController.swift */; };
 		B53F991A29452756000EDDC9 /* Clr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F991929452756000EDDC9 /* Clr.swift */; };
 		B54095FE29599C6D001F7626 /* SendOrderToFb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54095FD29599C6D001F7626 /* SendOrderToFb.swift */; };
+		B5411E2729688B1D003C118D /* ShowNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5411E2629688B1D003C118D /* ShowNotification.swift */; };
 		B547833E2941339500DE01AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547833D2941339500DE01AE /* AppDelegate.swift */; };
 		B54783402941339500DE01AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547833F2941339500DE01AE /* SceneDelegate.swift */; };
 		B54783452941339500DE01AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54783432941339500DE01AE /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		B5319FCC29422DA7008BA502 /* TakePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePaymentViewController.swift; sourceTree = "<group>"; };
 		B53F991929452756000EDDC9 /* Clr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clr.swift; sourceTree = "<group>"; };
 		B54095FD29599C6D001F7626 /* SendOrderToFb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOrderToFb.swift; sourceTree = "<group>"; };
+		B5411E2629688B1D003C118D /* ShowNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNotification.swift; sourceTree = "<group>"; };
 		B547833A2941339500DE01AE /* Olearys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olearys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B547833D2941339500DE01AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B547833F2941339500DE01AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				B52A10BD2957A971000758F3 /* Msg.swift */,
 				B508FFC7295A527200F66C85 /* ControlInputManager.swift */,
 				B5D59A622964C837009EA958 /* DeviceManager.swift */,
+				B5411E2629688B1D003C118D /* ShowNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B558EE582945C8D900EA1732 /* CreateTextViewToAddExtraOrderExtention.swift in Sources */,
 				B52A10BE2957A971000758F3 /* Msg.swift in Sources */,
 				B56A1CCC2944D0E10011CED9 /* GuestOrderCollectionViewCell.swift in Sources */,
+				B5411E2729688B1D003C118D /* ShowNotification.swift in Sources */,
 				B55B6E842941D07A000A4522 /* LogInViewController.swift in Sources */,
 				B516E8A52961EB8400EC2285 /* ExtentionHandleOrderViewController.swift in Sources */,
 				B583FE18294374FA0047FAFD /* Nr.swift in Sources */,

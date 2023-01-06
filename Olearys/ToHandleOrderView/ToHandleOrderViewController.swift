@@ -7,12 +7,14 @@ class ToHandleOrderViewController: UIViewController , UICollectionViewDataSource
     
     @IBOutlet weak var tablesCollectionview: UICollectionView!
     let observeTableInFb = ObserveTableInFb()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         observeTableInFb.getTables { [self] in
-            DispatchQueue.main.async { [self] in
+      DispatchQueue.main.async { [self] in
                 tablesCollectionview.reloadData()
+             
+            
             }
         }}
     

@@ -5,16 +5,20 @@ class LogInViewController: UIViewController {
   let buildTablesInFB = BuildTablesInFb()
   @IBOutlet weak var usernameTextField: UITextField!
   @IBOutlet weak var passWordTextField: UITextField!
-  
+   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     
-    //buildTablesInFB.buildTables(tableQuantity: 35)
+   // buildTablesInFB.buildTables(tableQuantity: 35)
     giveTextfieldPlaceHolderSize()
+      
+    
   }
   
   @IBAction func LogInButton(_ sender: Any) {
       
+   
       
     ControlInputManager.controllInput(userNameTextField:usernameTextField, passWrordTextField: passWordTextField , viewController: self)
       

@@ -11,7 +11,7 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     var extraOrderView = UIView()
     var ConfirmOrderIsDoneButton = UIButton()
     var cancelButton = UIButton()
-    
+   
     var currentGuest : Guest?
     var table = Table()
     
@@ -60,6 +60,7 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
         if checkIfOrderDone.areAllOrdersDone(guests: table.guests) {
             let updateTableInFb = UpdateTableInFb()
             updateTableInFb.makeOrderDone(table: table)
+       
             self.navigationController?.popViewController(animated: true)
         } else {
             Msg.sendMsg(vc: self, msg: Msg.orderDosentDone)

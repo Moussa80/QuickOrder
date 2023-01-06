@@ -9,17 +9,18 @@ class ObserveTableInFb {
     var tableshavePayment = [Table]()
     var tableshaveOrders = [Table]()
     
+    
     init() {
         ref = Database.database().reference()
     }
     
     func getTables(completionHandler: @escaping () -> ()) {
         ref.child(Constance.olearysEntre)
-            .child(Constance.tables)
-            .observe(DataEventType.value, with: { snapshot in
+            .child(Constance.tables).observe(DataEventType.value, with: { [self] snapshot in
                 self.tables.removeAll()
                 self.tableshaveOrders.removeAll()
                 self.tableshavePayment.removeAll()
+                
                 
                 for dataAsOneSnapshot in snapshot.children {
                     let oneSnapshot = dataAsOneSnapshot as! DataSnapshot
@@ -77,6 +78,7 @@ class ObserveTableInFb {
                     
                     if table.hasOrder == true {
                         self.tableshaveOrders.append(table)
+                        
                     }
                     if table.orderDone == true {
                         self.tableshavePayment.append(table)
@@ -86,8 +88,16 @@ class ObserveTableInFb {
                 }
                 
                 completionHandler()
+                
+                
+                
             })
     }
+    
+    
+    
+    
+    
 }
 
 
