@@ -32,8 +32,6 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     let tableViewModel = TableViewModel()
     var tableNumber = Constance.emptyText
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         runAllFunctionWhichShouldRunfirst()
@@ -47,7 +45,6 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constance.cellForMenu, for: indexPath) as! TableViewCellForMenue
-        
         
         let theType = showMenu[indexPath.section].types[indexPath.row]
         cell.typeNameLabel.text = "\(theType.name)   \(theType.price)"
