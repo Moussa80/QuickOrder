@@ -11,7 +11,7 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     var extraOrderView = UIView()
     var ConfirmOrderIsDoneButton = UIButton()
     var cancelButton = UIButton()
-   
+    
     var currentGuest : Guest?
     var table = Table()
     

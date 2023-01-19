@@ -6,7 +6,7 @@ extension TakeOrderViewController{
     
     func changeMenu (to selectedmenu : ChosenMenu){
         
-        giveAllButtonRedColor()
+        giveAllButtonGrayColor()
         
         switch selectedmenu {
         case .foodMenu:
@@ -25,7 +25,7 @@ extension TakeOrderViewController{
         menuTableView.reloadData()
     }
     
-    func giveAllButtonRedColor (){
+    func giveAllButtonGrayColor (){
         foodBtn.tintColor = .gray
         drinkBtn.tintColor = .gray
         desserBtn.tintColor = .gray

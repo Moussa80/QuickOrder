@@ -33,7 +33,7 @@ class TakePaymentViewController: UIViewController , UITableViewDelegate , UITabl
         label.font = UIFont.systemFont(ofSize: CGFloat(deviceManager.tittleeaderInSection))
         label.textColor = Clr.tableAvailable
         label.textAlignment = .center
-        label.backgroundColor = .black
+        label.backgroundColor = Clr.appColor
         return label
     }
     
