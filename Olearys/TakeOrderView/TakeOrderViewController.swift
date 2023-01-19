@@ -50,7 +50,7 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         let theType = showMenu[indexPath.section].types[indexPath.row]
-        cell.typeNameLabel.text = theType.name
+        cell.typeNameLabel.text = "\(theType.name)   \(theType.price)"
         cell.countOfTypes.text = showGuestOrdersQuantity(name: theType.name)
         cell.removeButton.tag = indexPath.row
         cell.addButton.tag = indexPath.row

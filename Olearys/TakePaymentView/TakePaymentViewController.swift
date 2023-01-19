@@ -8,7 +8,7 @@ class TakePaymentViewController: UIViewController , UITableViewDelegate , UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNumberLabel.text = " \(Constance.bord) \(table.number)      \(table.sum)"
+        tableNumberLabel.text = "\(Constance.table) \(table.number)  \(Constance.sum) \(table.sum)"
     }
     
     
@@ -29,7 +29,7 @@ class TakePaymentViewController: UIViewController , UITableViewDelegate , UITabl
         
         let deviceManager = DeviceManager()
         let label = UILabel()
-        label.text = "\(Constance.gastNr) \(table.guests[section].number)    summa :  \(table.guests[section].sum)"
+        label.text = "\(Constance.gastNr) \(table.guests[section].number) \(Constance.sum) \(table.guests[section].sum)"
         label.font = UIFont.systemFont(ofSize: CGFloat(deviceManager.tittleeaderInSection))
         label.textColor = Clr.tableAvailable
         label.textAlignment = .center

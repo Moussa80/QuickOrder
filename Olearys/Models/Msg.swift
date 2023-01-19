@@ -7,16 +7,15 @@ class Msg {
     
     
     
-    static let emptyAccess = "Var vänlig Fyll i ditt lösenord och användarnamn för att logga in"
-    static let noAccess = "Du har ej access"
-    static let guestDosentOrdered = "Denna gäst har inte beställt något"
-    static let tableHaseNoOrder = "Det finns ingen order att skicka"
-    static let tableIsTaken = "Detta bordet är upptaget"
-    static let emptyusername = "Var vänlig Fyll i ditt användarnamn"
-    static let emptypassword = "Var vänlig Fyll i ditt lösenord"
-    static let orderDosentDone = "order är inte klar"
-    static let guestHaventpaid = "Inte alla gäst har betalt"
-    static let areYouSure = "Är du säker du vill skicka beställning till köket ? "
+    static let emptyAccess = "Enter your username and password to log in"
+    static let noAccess = "You don't have access"
+    static let guestDosentOrdered = "This guest has not placed any orders"
+    static let tableHaseNoOrder = "There is no order to send"
+    static let tableIsTaken = "This table is busy"
+    static let emptyusername = "Please enter your username"
+    static let emptypassword = "Please enter your password"
+    static let orderDosentDone = "Order is not complete"
+    static let areYouSure = "Are you sure you want to send the order to the kitchen?"
     
     
     static func sendMsg (vc : UIViewController ,  msg : String){

@@ -13,7 +13,7 @@ class Table {
     var orderDone = false
     var hasOrder = false
     var tableColor = Constance.tableAvailable
-    var tableStatus = Constance.Ledig
+    var tableStatus = Constance.available
     
     
     func getTableSum(){

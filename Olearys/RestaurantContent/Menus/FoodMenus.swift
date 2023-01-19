@@ -12,24 +12,20 @@ class FoodMenus {
     
     init(){
         
-        let hotbuffalowings5Pcs = Food(name:  "Hot BUFFALO WINGS 5P", price: 99.0)
-        let hotbuffalowings10Pcs = Food(name: "Hot Buffalo Wings 10P", price: 159.0)
-        let hotbuffalowings15Pcs = Food(name: "Hot Buffalo Wings 15P", price: 199.0)
-        let parmesanGarlicWings5p  = Food(name: " PARMESAN & GARLIC WINGS 5P", price: 99.0)
-        let parmesanGarlicWings10p = Food(name: " PARMESAN & GARLIC WINGS 10P", price: 159.0)
-        let parmesanGarlicWings15p = Food(name: " PARMESAN & GARLIC WINGS 15P", price: 199.0)
+        let hotbuffalowings = Food(name:  "Hot BUFFALO WINGS", price: 99.0)
+        let parmesanGarlicWings  = Food(name: " PARMESAN GARLIC WINGS", price: 99.0)
         let olearysComboPlate = Food(name: "OLEARYS COMBO PLATE", price: 129.0)
         let pannoumiCheesSticks = Food(name: "PANNOUMI CHEESE STICKS", price: 55.0)
         let garlicCheeseBread = Food(name: "GARLIC & CHEESE BREAD", price: 25.0)
         let beefCheeseNachos = Food(name: "BEEF & CHEESE NACHOS", price: 109.0)
-        let beefCheeseNachosGuacamole = Food(name: "BEEF & CHEESE NACHOS Guacamole", price: 119.0)
+        let beefCheeseNachosGuacamole = Food(name: "BEEF CHEESE Guacamole", price: 119.0)
         let nachos = Food(name: "NACHOS", price: 55.0)
-        let grilledChickenQuesadillas = Food(name: "GRILLED CHICKEN QUESADILLAS", price: 135.0)
-        let oumphQuesadillasVagen = Food(name: "OUMPH QUESADILLAS (VEGAN)", price: 269)
+        let grilledChickenQuesadillas = Food(name: "GRILLED QUESADILLAS", price: 135.0)
+        let oumphQuesadillasVagen = Food(name: "OUMPH QUESADILLAS", price: 269)
         
         self.snacknShareMenu.tittle = "Snack And Share"
-        self.snacknShareMenu.types = [hotbuffalowings5Pcs,hotbuffalowings10Pcs,hotbuffalowings15Pcs,
-                                      parmesanGarlicWings5p,parmesanGarlicWings10p,parmesanGarlicWings15p,
+        self.snacknShareMenu.types = [hotbuffalowings,
+                                      parmesanGarlicWings,
                                       olearysComboPlate,pannoumiCheesSticks,garlicCheeseBread,beefCheeseNachos,beefCheeseNachosGuacamole,
                                       nachos,grilledChickenQuesadillas,oumphQuesadillasVagen]
         //---------------------------------------------------------------------------------------
@@ -39,10 +35,10 @@ class FoodMenus {
         let chilliCheeseBurger = Food(name: "CHILLI CHEESE BURGER", price: 185.0)
         let baconBbqBurger = Food(name: "BACON BBQ BURGER", price: 185.0)
         let truffleOozingBurger = Food(name: "TRUFFLE OOZING BURGER", price: 185.0)
-        let giantDoubleCheeseBurger = Food(name: "GIANT DOUBLE CHEESE BURGER", price: 209.0)
+        let giantDoubleCheeseBurger = Food(name: "GIANT DOUBLE CHEESE", price: 209.0)
         let cheedarCheeseBurger = Food(name: "CHEDAR CHEESE BURGER ", price: 169.0)
         let crispyNachoBurger = Food(name: "Crispy NACHO BURGER", price: 175)
-        let texMexOumphburger = Food(name: "TEX - MEX OUMPH BURGER VEGAN", price: 175.0)
+        let texMexOumphburger = Food(name: "TEX OUMPH BURGER", price: 175.0)
         let sweetPotatoFries = Food(name: "SWEET POTATO FRIES", price: 15.0)
         let cheesyFries = Food(name: "CHEESY FRIES", price: 25.0)
         let onionRings2p = Food(name: "ONION RINGS 2P", price: 15.0)

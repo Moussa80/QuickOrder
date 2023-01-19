@@ -17,7 +17,7 @@ class HandleOrderViewController: UIViewController , UICollectionViewDelegate , U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableNumberLabel.text = "\(table.number) Summa : \(table.sum)"
+        tableNumberLabel.text = "\(Constance.table) \(table.number)"
         addComponentToViewToHandleSpecialOrder()
     }
     

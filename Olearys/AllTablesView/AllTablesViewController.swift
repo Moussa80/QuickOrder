@@ -28,7 +28,7 @@ extension AllTablesViewController: UICollectionViewDelegate, UICollectionViewDat
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constance.cellForAllTables, for: indexPath) as! CollectionViewCellForAllTables
     let table = observeTableInFb.tables[indexPath.row]
     cell.tablesNumberlabel.backgroundColor = UIColor(named: table.tableColor)
-    cell.tablesNumberlabel.text = "\(table.number) \(table.tableStatus)"
+    cell.tablesNumberlabel.text = "\(table.number)    \(table.tableStatus)"
     return cell
   }
   
@@ -37,6 +37,7 @@ extension AllTablesViewController: UICollectionViewDelegate, UICollectionViewDat
     return CGSize(width: cellSize.width, height: cellSize.heigh)
   }
   
+    
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let table = observeTableInFb.tables[indexPath.row]
     let tableNumber = observeTableInFb.tables[indexPath.row].number

@@ -15,13 +15,13 @@ extension TakeOrderViewController {
         extraOrderView.backgroundColor = Clr.appColor
         addButton.frame =  CGRect(x: 50.0, y: view.frame.height / 2 , width: 120, height: 45)
         addButton.layer.cornerRadius = 10
-        addButton.setTitle("Lägg till", for: .normal)
+        addButton.setTitle("Add", for: .normal)
         addButton.backgroundColor = .darkGray
         addButton.addTarget(self, action:#selector(self.addExtraOrder), for: .touchUpInside)
         
         cancelButton.frame = CGRect(x: view.frame.width - 150, y:  view.frame.height / 2, width: 120, height: 45)
         cancelButton.layer.cornerRadius = 10
-        cancelButton.setTitle("Avbryt", for: .normal)
+        cancelButton.setTitle("Cancel", for: .normal)
         cancelButton.backgroundColor = .red
         cancelButton.addTarget(self, action:#selector(self.cancel), for: .touchUpInside)
         
@@ -68,7 +68,7 @@ extension TakeOrderViewController {
         self.navigationItem.rightBarButtonItem?.isHidden = false
         self.navigationItem.hidesBackButton = false
         view.endEditing(true)
-        self.navigationItem.title = "\(Constance.bord)  \(tableNumber)"
+        self.navigationItem.title = "\(Constance.table)  \(tableNumber)"
         extraOrderView.isHidden = true
         cancelButton.isHidden = true
         extraOrderTextView.isHidden = true

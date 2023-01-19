@@ -35,7 +35,7 @@ extension TakeOrderViewController {
     
     func showTableInfo(){
         
-        self.navigationItem.title = "\(Constance.bord) \(tableViewModel.number)"
+        self.navigationItem.title = "\(Constance.table) \(tableViewModel.number)"
         self.navigationItem.rightBarButtonItem?.title = "\(tableViewModel.sum)"
         
         let devicemanager = DeviceManager()

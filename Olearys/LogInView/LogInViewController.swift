@@ -6,13 +6,14 @@ class LogInViewController: UIViewController {
   @IBOutlet weak var usernameTextField: UITextField!
   @IBOutlet weak var passWordTextField: UITextField!
    
-    let showNotification = ShowNotification()
+  
+    // new version english version
     
   override func viewDidLoad() {
     super.viewDidLoad()
 
       
-    // buildTablesInFB.buildTables(tableQuantity: 35)
+   
     giveTextfieldPlaceHolderSize()
       
     

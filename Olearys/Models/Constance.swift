@@ -37,11 +37,11 @@ class Constance {
     static let tableOrdersPaid = "tableOrdersPaid"
     static let tableOrdersDone = "tableOrdersDone"
     static let tableSum = "tableSum"
-    static let Ledig = "Ledig"
+    static let available = "Available"
     static let tableStatus =  "tableStatus"
     static let tableColor = "tableColor"
     static let tableBusy = "tableBusy"
-    static let busy = "Upptaget"
+    static let busy = "Busy"
     
     
     // Guest
@@ -58,12 +58,12 @@ class Constance {
     
     //other
     static let emptyText = ""
-    static let bord = "Bord "
-    static let confirm = "Bekräfta"
-    static let ja = "Ja"
-    static let no = "Nej"
-    static let gastNr = "Gäst "
-    static let sum = "Summa "
+    static let table = "Table "
+    static let confirm = "Confirme"
+    static let ja = "Yes"
+    static let no = "NO"
+    static let gastNr = "Guest "
+    static let sum = "Sum: "
     
     
 }

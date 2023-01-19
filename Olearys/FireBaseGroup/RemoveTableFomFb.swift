@@ -36,7 +36,7 @@ class RemoveTableFomFb {
             Constance.tableOrdersDone : false ,
             Constance.tableSum : 0.0 ,
             Constance.tableColor : Constance.tableAvailable ,
-            Constance.tableStatus : Constance.Ledig
+            Constance.tableStatus : Constance.available
         ]
         
         table.setValue(tableAsDectionary)
